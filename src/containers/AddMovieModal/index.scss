@@ -1,0 +1,67 @@
+@import "../../site-setting";
+
+.Modal {
+	width: 924px;
+	height: 668px;
+	margin: auto;
+	padding: 5px;
+	box-sizing: border-box;
+	background-color: $modalContentBackground;
+	box-shadow: 3px 3px 5px $modalContentBoxShadow;
+	border-radius: 5px;
+
+	&:focus {
+		outline: none;
+	}
+	
+	::-webkit-scrollbar {
+		width: 8px;
+		height: 10px;
+
+	}
+	::-webkit-scrollbar-thumb {
+		border-radius: 8px;
+		background: gray;
+	}
+
+	.movie-ticket-container{
+		height: 100%;
+		overflow: auto;
+		display: flex;
+		flex-direction: column;
+
+		.movie-block {
+			flex: 4;
+		}
+		.seat-amount{
+			margin: auto;
+			display: flex;
+			flex: 1;
+		}
+		.total-price{
+			margin: auto;
+			display: flex;
+			flex: 1;
+		}
+		.inputMoney{
+			margin: auto;
+			display: flex;
+			flex: 1;
+		}
+		.change{
+			margin: auto;
+			display: flex;
+			flex: 1;
+		}
+	}
+}
+
+.Overlay {
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $modalOutside;
+}

@@ -1,0 +1,55 @@
+@import "../../site-setting";
+@import "../../mixin";
+
+.movie-block{
+	display: flex;
+	background-color: $movieBackground;
+	margin: 5px;
+	padding: 5px;
+	box-sizing: border-box;
+	box-shadow: 1px 1px 5px $movieBoxShadow;
+
+	&.half{
+		height: 200px;
+		width: 49%;
+		&:hover{
+			box-shadow: 1px 1px 5px $movieBoxShadowHover;
+			cursor: pointer;
+		}
+	}
+	
+	
+	.movie-img-container{
+		width: 30%;
+		height: 100%;
+		display: flex;
+		img{
+			height: 100%;
+			margin: auto;
+		}
+	}
+
+.detail{
+	width: 70%;
+	margin-left: 20px;
+	
+	.detail-header{
+		font-size: 25px;
+		height: 20%;
+		@include ellipis-text();
+	}
+	.detail-body{
+		height: 70%;
+	}
+	.detail-footer{
+		height: 10%;
+		display: flex;
+		.ticket-fee{
+			flex: 1;
+		}
+		.release-date{
+			flex: 1;
+		}
+	}
+}
+} 
